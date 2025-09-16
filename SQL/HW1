@@ -1,0 +1,54 @@
+CREATE DATABASE Academy;
+GO
+
+USE Academy;
+GO
+
+CREATE TABLE Academy.dbo.Groups (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(10) NOT NULL,
+	Rating int NOT NULL,
+	Year int NOT NULL,
+	CONSTRAINT Groups_PK PRIMARY KEY (Id),
+	CONSTRAINT Groups_UNIQUE_Name UNIQUE (Name),
+	CONSTRAINT Groups_CHECK_Name CHECK (Name <> ''),
+	CONSTRAINT Groups_CHECK_Rating CHECK (Rating BETWEEN 0 AND 5),
+	CONSTRAINT Groups_CHECK_Year CHECK (Year BETWEEN 1 AND 5)
+);
+GO
+
+CREATE TABLE Academy.dbo.Departments (
+	Id int IDENTITY(1,1) NOT NULL,
+	Financing money NOT NULL DEFAULT 0,
+	Name nvarchar(100) NOT NULL,
+	CONSTRAINT Departments_PK PRIMARY KEY (Id),
+	CONSTRAINT Departments_UNIQUE_Name UNIQUE (Name),
+	CONSTRAINT Departments_CHECK_Name CHECK (Name <> ''),
+	CONSTRAINT Departments_CHECK_Financing CHECK (Financing >= 0)
+);
+GO
+
+CREATE TABLE Academy.dbo.Faculties (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(100) NOT NULL,
+	CONSTRAINT Faculties_PK PRIMARY KEY (Id),
+	CONSTRAINT Faculties_UNIQUE_Name UNIQUE (Name),
+	CONSTRAINT Faculties_CHECK_Name CHECK (Name <> '')
+);
+GO
+
+CREATE TABLE Academy.dbo.Teachers (
+	Id int IDENTITY(1,1) NOT NULL,
+	EmploymentDate date NOT NULL,
+	Name nvarchar(max) NOT NULL,
+	Premium money NOT NULL DEFAULT 0,
+	Salary money NOT NULL,
+	Surname nvarchar(max) NOT NULL,
+	CONSTRAINT Teachers_PK PRIMARY KEY (Id),
+	CONSTRAINT Teachers_CHECK_EmploymentDate CHECK (EmploymentDate >= '1990-01-01'),
+	CONSTRAINT Teachers_CHECK_Name CHECK (Name <> ''),
+	CONSTRAINT Teachers_CHECK_Premium CHECK (Premium >= 0),
+	CONSTRAINT Teachers_CHECK_Salary CHECK (Salary > 0),
+	CONSTRAINT Teachers_CHECK_Surname CHECK (Surname <> '')
+);
+GO
