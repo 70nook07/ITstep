@@ -12,7 +12,6 @@ INNER JOIN (
 ) l ON g.Id = l.GroupId
 WHERE g.Year = 5 
 AND d.Name = 'Department of Software Engineering'
-ORDER BY g.Name;
 
 GO
 
@@ -48,7 +47,6 @@ FROM Groups g
 INNER JOIN GroupCurators gc ON g.Id = gc.GroupId
 GROUP BY g.Id, g.Name
 HAVING COUNT(gc.TeacherId) > 1
-ORDER BY CuratorsCount DESC;
 
 GO
 
@@ -75,7 +73,6 @@ HAVING SUM(d.Financing) > (
     INNER JOIN Faculties f2 ON d2.FacultyId = f2.Id
     WHERE f2.Name = 'Faculty of Computer Science'
 )
-ORDER BY TotalFinancing DESC;
 
 GO
 
@@ -99,7 +96,6 @@ SELECT
     LectureCount
 FROM TeacherLectureCount
 WHERE RankBySubject = 1
-ORDER BY SubjectName, LectureCount DESC;
 
 GO
 
@@ -110,7 +106,6 @@ SELECT TOP 1
 FROM Subjects s
 LEFT JOIN Lectures l ON s.Id = l.SubjectId
 GROUP BY s.Id, s.Name
-ORDER BY COUNT(l.Id) ASC;
 
 GO
 
