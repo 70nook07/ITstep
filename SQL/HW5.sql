@@ -65,7 +65,6 @@ ORDER BY d.Name, g.Name;
 GO
 
 -- 7. Виведіть назви предметів, які викладає викладач «Samantha Adams»
--- Припускаємо таблицю Subjects та Lectures
 SELECT DISTINCT
     s.Name AS SubjectName
 FROM Subjects s
