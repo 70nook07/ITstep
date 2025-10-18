@@ -4,7 +4,6 @@ SELECT
     g.Name AS GroupName
 FROM Teachers t
 CROSS JOIN Groups g
-ORDER BY TeacherName, GroupName;
 
 GO
 
@@ -38,7 +37,6 @@ FROM Teachers t
 INNER JOIN Lectures l ON t.Id = l.TeacherId
 INNER JOIN Groups g ON l.GroupId = g.Id
 WHERE g.Name = 'P107'
-ORDER BY t.Surname;
 
 GO
 
@@ -50,7 +48,6 @@ FROM Teachers t
 INNER JOIN Lectures l ON t.Id = l.TeacherId
 INNER JOIN Groups g ON l.GroupId = g.Id
 INNER JOIN Faculties f ON g.FacultyId = f.Id
-ORDER BY t.Surname, f.Name;
 
 GO
 
@@ -60,7 +57,6 @@ SELECT
     g.Name AS GroupName
 FROM Departments d
 INNER JOIN Groups g ON d.Id = g.DepartmentId
-ORDER BY d.Name, g.Name;
 
 GO
 
@@ -71,7 +67,6 @@ FROM Subjects s
 INNER JOIN Lectures l ON s.Id = l.SubjectId
 INNER JOIN Teachers t ON l.TeacherId = t.Id
 WHERE t.Name = 'Samantha' AND t.Surname = 'Adams'
-ORDER BY s.Name;
 
 GO
 
@@ -83,7 +78,6 @@ INNER JOIN Teachers t ON d.Id = t.DepartmentId
 INNER JOIN Lectures l ON t.Id = l.TeacherId
 INNER JOIN Subjects s ON l.SubjectId = s.Id
 WHERE s.Name = 'Database Theory'
-ORDER BY d.Name;
 
 GO
 
@@ -93,7 +87,6 @@ SELECT
 FROM Groups g
 INNER JOIN Faculties f ON g.FacultyId = f.Id
 WHERE f.Name = 'Faculty of Computer Science'
-ORDER BY g.Name;
 
 GO
 
@@ -104,7 +97,6 @@ SELECT
 FROM Groups g
 INNER JOIN Faculties f ON g.FacultyId = f.Id
 WHERE g.Year = 5
-ORDER BY f.Name, g.Name;
 
 GO
 
@@ -119,4 +111,3 @@ INNER JOIN Subjects s ON l.SubjectId = s.Id
 INNER JOIN Groups g ON l.GroupId = g.Id
 INNER JOIN Classrooms c ON l.ClassroomId = c.Id
 WHERE c.RoomNumber = 'B103'
-ORDER BY t.Surname, s.Name;
