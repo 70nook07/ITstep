@@ -561,7 +561,7 @@ void play(Game* game) {
 
 
 int main() {
-	srand(time(0)); // Seed random number generator
+	srand(time(0));
     
     Game game;
     init_game(&game);
