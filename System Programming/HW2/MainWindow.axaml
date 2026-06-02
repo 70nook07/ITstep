@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FileCopy_Avalonia.MainWindow"
+        Title="Avalonia File Copier (Linux)" Width="550" Height="260"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*,Auto">
+        
+        <TextBox Name="TxtFrom" Grid.Row="0" Grid.Column="0" 
+                 Watermark="Type source path or press 'From'..." Margin="0,5,10,5"/>
+        <Button Name="BtnFrom" Content="From" Grid.Row="0" Grid.Column="1" 
+                Width="85" Click="BtnFrom_Click" Margin="0,5,0,5"/>
+
+        <TextBox Name="TxtTo" Grid.Row="1" Grid.Column="0" 
+                 Watermark="Type directory path or press 'To'..." Margin="0,5,10,5"/>
+        <Button Name="BtnTo" Content="To" Grid.Row="1" Grid.Column="1" 
+                Width="85" Click="BtnTo_Click" Margin="0,5,0,5"/>
+
+        <Button Name="BtnCopy" Content="Copy" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                Margin="0,15,0,5" Background="DodgerBlue" Foreground="White"
+                IsDefault="True" Click="BtnCopy_Click"/>
+
+        <TextBlock Name="TxtStatus" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Margin="0,10,0,0" Foreground="Gray" TextWrapping="Wrap" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold"/>
+    </Grid>
+</Window>
