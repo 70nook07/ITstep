@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TheExam.MainWindow"
+        Title="Monitoring/Word ban Program" Width="900" Height="650"
+        WindowStartupLocation="CenterScreen">
+    
+    <TabControl Margin="10">
+        <TabItem Header="Task 1: Word Scanner">
+            <Grid RowDefinitions="Auto, Auto, Auto, *, Auto" Margin="10" RowSpacing="12">
+                <StackPanel Grid.Row="0" Orientation="Vertical" Spacing="5">
+                    <TextBlock Text="Forbidden Words (Comma Separated):" FontWeight="Bold"/>
+                    <TextBox Name="TxtForbiddenWords" Text="license, random, private, password"/>
+                </StackPanel>
+
+                <Grid Grid.Row="1" ColumnDefinitions="*, Auto" ColumnSpacing="10">
+                    <TextBox Grid.Column="0" Name="TxtOutputDir" PlaceholderText="Output Directory (/home/user/Censored)..."/>
+                    <Button Grid.Column="1" Content="Browse" Click="OnBrowseOutputClick"/>
+                </Grid>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="10">
+                    <Button Content="Start Scan" Name="BtnStart" Click="OnStartScanClick" Background="Green" Foreground="White"/>
+                    <Button Content="Pause" Name="BtnPause" Click="OnPauseScanClick" IsEnabled="False"/>
+                    <Button Content="Resume" Name="BtnResume" Click="OnResumeScanClick" IsEnabled="False"/>
+                    <Button Content="Stop" Name="BtnStop" Click="OnStopScanClick" IsEnabled="False" Background="Red" Foreground="White"/>
+                </StackPanel>
+
+                <ListBox Grid.Row="3" Name="LstScanLogs" Background="#1E1E1E"/>
+
+                <StackPanel Grid.Row="4" Orientation="Vertical" Spacing="5">
+                    <TextBlock Name="TxtProgressState" Text="Status: Idle"/>
+                    <ProgressBar Name="PrgScanProgress" Minimum="0" Maximum="100" Height="20" ShowProgressText="True"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Task 2: Activity Monitor">
+            <Grid ColumnDefinitions="250, *" Margin="10" ColumnSpacing="15">
+                <Border Grid.Column="0" Background="#252526" Padding="10">
+                    <StackPanel Spacing="12">
+                        <TextBlock Text="Adjustments" FontSize="16" FontWeight="Bold"/>
+                        <Separator/>
+                        
+                        <CheckBox Name="ChkStatsActive" Content="Collect Statistics" IsChecked="True"/>
+                        <CheckBox Name="ChkModerationActive" Content="Enable Moderation" IsChecked="True"/>
+
+                        <TextBlock Text="Banned Programs:" FontWeight="Bold"/>
+                        <TextBox Name="TxtBannedApps" Text="xterm, nano, vlc.bin" PlaceholderText="e.g. gedit, vlc"/>
+
+                        <TextBlock Text="Banned Keywords:" FontWeight="Bold"/>
+                        <TextBox Name="TxtBannedKeys" Text="malware, exploit" PlaceholderText="e.g. exploit, hack"/>
+
+                        <TextBlock Text="Log Output Directory:" FontWeight="Bold"/>
+                        <TextBox Name="TxtMonitorLogPath"/>
+
+                        <Button Content="Apply &amp; Active Monitor" Click="OnToggleMonitorClick" HorizontalAlignment="Stretch" Background="Blue" Foreground="White"/>
+                    </StackPanel>
+                </Border>
+
+                <Grid Grid.Column="1" RowDefinitions="Auto, *" RowSpacing="10">
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="20">
+                        <TextBlock Text="Moderation State" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <TextBlock Name="TxtMonitorStatus" Text="Status: Inactive" Foreground="Red" FontWeight="Bold" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    
+                    <TabControl Grid.Row="1">
+                        <TabItem Header="Log">
+                            <ListBox Name="LstActivityLogs" Background="#1E1E1E"/>
+                        </TabItem>
+                        <TabItem Header="Violations">
+                            <ListBox Name="LstViolationLogs" Background="#1E1E1E"/>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
