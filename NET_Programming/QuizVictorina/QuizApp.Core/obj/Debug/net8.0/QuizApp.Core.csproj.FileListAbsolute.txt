@@ -1,0 +1,11 @@
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/bin/Debug/net8.0/QuizApp.Core.deps.json
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/bin/Debug/net8.0/QuizApp.Core.dll
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/bin/Debug/net8.0/QuizApp.Core.pdb
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/QuizApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/QuizApp.Core.AssemblyInfoInputs.cache
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/QuizApp.Core.AssemblyInfo.cs
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/QuizApp.Core.csproj.CoreCompileInputs.cache
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/QuizApp.Core.dll
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/refint/QuizApp.Core.dll
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/QuizApp.Core.pdb
+/home/abyss/RiderProjects/QuizVictorina/QuizApp.Core/obj/Debug/net8.0/ref/QuizApp.Core.dll

@@ -1,0 +1,107 @@
+[
+  {
+    "Name": "History",
+    "Questions": [
+      {
+        "Id": 1,
+        "Text": "In which year did World War II end?",
+        "Options": ["1943", "1945", "1947", "1950"],
+        "CorrectOptionIndices": [1]
+      },
+      {
+        "Id": 2,
+        "Text": "Which of the following empires existed in ancient times?",
+        "Options": ["Roman Empire", "Ottoman Empire", "Byzantine Empire", "British Empire"],
+        "CorrectOptionIndices": [0, 2]
+      },
+      {
+        "Id": 3,
+        "Text": "Who was the first President of the United States?",
+        "Options": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"],
+        "CorrectOptionIndices": [1]
+      },
+      {
+        "Id": 4,
+        "Text": "The Berlin Wall fell in which year?",
+        "Options": ["1985", "1987", "1989", "1991"],
+        "CorrectOptionIndices": [2]
+      },
+      {
+        "Id": 5,
+        "Text": "Which countries were part of the Triple Entente before World War I?",
+        "Options": ["France", "Germany", "Russia", "United Kingdom"],
+        "CorrectOptionIndices": [0, 2, 3]
+      }
+    ]
+  },
+  {
+    "Name": "Geography",
+    "Questions": [
+      {
+        "Id": 1,
+        "Text": "What is the capital of Ukraine?",
+        "Options": ["Lviv", "Odesa", "Kyiv", "Kharkiv"],
+        "CorrectOptionIndices": [2]
+      },
+      {
+        "Id": 2,
+        "Text": "Which is the longest river in the world?",
+        "Options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+        "CorrectOptionIndices": [1]
+      },
+      {
+        "Id": 3,
+        "Text": "Which of these countries border Ukraine?",
+        "Options": ["Poland", "France", "Romania", "Germany"],
+        "CorrectOptionIndices": [0, 2]
+      },
+      {
+        "Id": 4,
+        "Text": "Which continent is the Sahara Desert located on?",
+        "Options": ["Asia", "Africa", "Australia", "South America"],
+        "CorrectOptionIndices": [1]
+      },
+      {
+        "Id": 5,
+        "Text": "Which of these are oceans?",
+        "Options": ["Pacific", "Baltic", "Atlantic", "Caspian"],
+        "CorrectOptionIndices": [0, 2]
+      }
+    ]
+  },
+  {
+    "Name": "Biology",
+    "Questions": [
+      {
+        "Id": 1,
+        "Text": "What is the powerhouse of the cell?",
+        "Options": ["Nucleus", "Ribosome", "Mitochondrion", "Golgi apparatus"],
+        "CorrectOptionIndices": [2]
+      },
+      {
+        "Id": 2,
+        "Text": "Which of the following are vertebrates?",
+        "Options": ["Frog", "Jellyfish", "Snake", "Earthworm"],
+        "CorrectOptionIndices": [0, 2]
+      },
+      {
+        "Id": 3,
+        "Text": "What gas do plants absorb from the atmosphere for photosynthesis?",
+        "Options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+        "CorrectOptionIndices": [1]
+      },
+      {
+        "Id": 4,
+        "Text": "Which blood type is known as the universal donor?",
+        "Options": ["A", "B", "AB", "O negative"],
+        "CorrectOptionIndices": [3]
+      },
+      {
+        "Id": 5,
+        "Text": "Which of the following organs are part of the human digestive system?",
+        "Options": ["Stomach", "Lungs", "Liver", "Kidneys"],
+        "CorrectOptionIndices": [0, 2]
+      }
+    ]
+  }
+]
